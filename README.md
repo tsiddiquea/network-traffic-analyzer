@@ -1,34 +1,41 @@
-# PCAP Forensics Analyzer
+# Network Traffic Analyzer
 
-## Overview
+## Project Overview
 
-The PCAP Forensics Analyzer is an advanced cybersecurity analysis tool developed to simulate real-world digital forensics and network threat investigation workflows.
+The Network Traffic Analyzer is a modular Python-based security analysis framework designed to inspect captured network traffic and identify indicators of malicious or suspicious activity.
 
-This project processes packet capture (PCAP) files and performs automated detection of suspicious network behavior such as:
+The system processes packet capture (PCAP) datasets and applies multiple behavioural detection modules to uncover potential reconnaissance attempts, insecure credential transmission, and abnormal DNS communication patterns.
 
-* Port scanning attacks
-* Credential leakage in network traffic
-* Suspicious DNS communication patterns
-* Traffic distribution and anomaly summary
+This project simulates the workflow of a network security analyst performing post-incident traffic investigation in enterprise environments.
 
-The system demonstrates applied knowledge of network security monitoring, threat detection engineering, and packet-level forensic analysis, reflecting real techniques used by Security Operations Centers (SOC) and incident response teams.
+It demonstrates applied knowledge of packet structures, traffic pattern analysis, and automated threat detection logic.
 
 
-## Key Features
+## Core Objectives
 
-* Automated PCAP parsing and analysis using packet inspection
-* Detection of high-frequency port scanning behavior
-* Identification of plaintext credential transmission in HTTP / FTP traffic
-* Monitoring of suspicious DNS query patterns linked to potential malware activity
-* Network traffic summary generation
-* Structured forensic report generation and export
-* Modular detection architecture for extensibility
-* Simulated realistic attack traffic generator
+The project aims to replicate real investigative processes used in:
 
+* Security Operations Centers (SOC)
+* Digital Forensics and Incident Response (DFIR) teams
+* Network intrusion detection research
+* Malware communication analysis
+
+By transforming raw packet captures into structured intelligence reports.
+
+
+## Key Capabilities
+
+* Detection of high-frequency TCP port scanning behaviour
+* Identification of plaintext authentication credentials within traffic streams
+* Analysis of DNS queries to detect potential command-and-control communication
+* Automated traffic summarization and host activity profiling
+* Modular detector architecture enabling extensibility
+* Generation of structured forensic investigation reports
+* Simulation of realistic malicious traffic for controlled testing
 
 ## Project Architecture
 ```
-pcap-forensics-analyzer/
+network-traffic-analyzer/
 │
 ├── pcap_analyzer.py        → Main analysis engine
 ├── detectors.py            → Threat detection modules
@@ -125,45 +132,44 @@ Queried 50 times
 192.168.1.200 → 50 packets
 ```
 
-
 ## Performance Characteristics
 
-* Efficient packet processing pipeline
-* Lightweight memory footprint suitable for local forensic analysis
-* Modular detection design enables scaling
-* Fast execution on medium-size PCAP datasets
+* Efficient packet iteration using Scapy packet reader
+* Lightweight memory footprint suitable for local analysis environments
+* Detection logic designed for clarity and extensibility
+* Fast report generation even on large traffic datasets
 
 
-## Security & Ethical Use
+## Security and Ethical Usage
 
-This project is designed strictly for:
+This project is intended strictly for:
 
 * Cybersecurity education
-* Digital forensics practice
-* Threat detection research
-* Defensive security engineering learning
+* Network defense training
+* Digital forensics research
+* Security tool development practice
 
-It must be used only in authorized environments and controlled lab settings.
+It must only be used on authorized datasets and controlled laboratory environments.
 
 
-## Learning Outcomes
+## Learning Outcomes Demonstrated
 
-This project demonstrates strong competencies in:
+Through this project the following competencies are showcased:
 
-* Network packet analysis
-* Threat hunting methodology
-* Digital forensic workflow design
-* Security detection engineering
-* Python-based cybersecurity tool development
-* Realistic attack simulation techniques
+* Network protocol inspection
+* Threat behaviour modeling
+* Packet-level forensic reasoning
+* Secure system analysis mindset
+* Modular cybersecurity tool engineering
+* Traffic intelligence extraction techniques
 
 
 ## Author
 
-Developed as part of a practical cybersecurity research initiative focused on building real-world defensive security tools and analysis frameworks.
+Developed as part of a practical cybersecurity engineering initiative focused on network threat detection and incident analysis skills.
 
 
 ## License
 
-This project is released for educational and research purposes.
-Users are responsible for ethical and lawful usage.
+This project is released for academic and research use.
+Users are responsible for ensuring ethical and lawful application.
